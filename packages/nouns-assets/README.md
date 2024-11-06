@@ -1,4 +1,7 @@
-# @nouns/assets
+
+# @nomonouns/assets
+
+This package is a fork of the original `@nouns/assets` package. It aims to keep asset data and structures up-to-date with the latest Nouns contracts, particularly as new traits are added. This ensures compatibility with applications like Nomo.wtf, where accurate and current trait data is essential for expected functionality.
 
 ## Development
 
@@ -13,7 +16,7 @@ yarn
 **Access Noun RLE Image Data**
 
 ```ts
-import { ImageData } from '@nouns/assets';
+import { ImageData } from '@nomonouns/assets';
 
 const { bgcolors, palette, images } = ImageData;
 const { bodies, accessories, heads, glasses } = images;
@@ -22,7 +25,7 @@ const { bodies, accessories, heads, glasses } = images;
 **Get Noun Part & Background Data**
 
 ```ts
-import { getNounData } from '@nouns/assets';
+import { getNounData } from '@nomonouns/assets';
 
 const seed = {
   background: 0,
@@ -37,7 +40,7 @@ const { parts, background } = getNounData(seed);
 **Emulate `NounSeeder.sol` Pseudorandom seed generation**
 
 ```ts
-import { getNounSeedFromBlockHash } from '@nouns/assets';
+import { getNounSeedFromBlockHash } from '@nomonouns/assets';
 
 const blockHash = '0x5014101691e81d79a2eba711e698118e1a90c9be7acb2f40d7f200134ee53e01';
 const nounId = 116;
@@ -68,7 +71,7 @@ Generate a Noun using only a block hash, which saves calls to `NounSeeder` and `
    - get the latest block hash from your provider (named `latestBlockHash` below)
 */
 
-import { ImageData, getNounSeedFromBlockHash, getNounData } from '@nouns/assets';
+import { ImageData, getNounSeedFromBlockHash, getNounData } from '@nomonouns/assets';
 import { buildSVG } from '@nouns/sdk';
 const { palette } = ImageData; // Used with `buildSVG``
 
@@ -84,7 +87,7 @@ const { palette } = ImageData; // Used with `buildSVG``
 */
 const seed = getNounSeedFromBlockHash(nextNounId, latestBlockHash);
 
-/** 
+/**
  * OUTPUT:
    {
      parts: [

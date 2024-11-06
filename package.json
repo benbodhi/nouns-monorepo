@@ -6,7 +6,7 @@
     "build": "lerna run build",
     "test": "lerna run --parallel test",
     "clean": "lerna run --parallel clean",
-    "prepare": "lerna run prepare --scope=@nouns/{assets,contracts,sdk}",
+    "prepare": "lerna run prepare --scope=@nomonouns/assets --scope=@nouns/contracts --scope=@nouns/sdk",
     "lint": "eslint 'packages/**/*.ts' --fix",
     "format": "NODE_OPTIONS=--max_old_space_size=16384 prettier --write 'packages/**/*.{ts(x)?,sol,md,css,json}' '!**/typechain/**'"
   },

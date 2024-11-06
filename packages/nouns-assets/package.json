@@ -1,9 +1,9 @@
 {
-  "name": "@nouns/assets",
+  "name": "@nomonouns/assets",
   "version": "0.9.0",
   "description": "Nouns run-length encoded image data",
   "author": "Nounders",
-  "homepage": "https://nouns.wtf",
+  "homepage": "https://nomo.wtf",
   "license": "GPL-3.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -18,6 +18,7 @@
   },
   "devDependencies": {
     "@nouns/sdk": "^0.4.0",
+    "@types/pako": "^2.0.3",
     "@types/pngjs": "^6.0.1",
     "chai": "^4.2.0",
     "mocha": "^8.4.0",
@@ -25,6 +26,7 @@
   },
   "dependencies": {
     "@ethersproject/bignumber": "^5.5.0",
-    "@ethersproject/solidity": "^5.5.0"
+    "@ethersproject/solidity": "^5.5.0",
+    "pako": "^2.1.0"
   }
 }
